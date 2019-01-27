@@ -19,7 +19,7 @@ def main():
 def how_are_you_callback(hermes, intent_message):
     session_id = intent_message.session_id
     response = "Amazing. What about you?"
-    hermes.publish_end_session(session_id, response)
+    hermes.publish_continue_session(session_id, response, INTENT_FILTER_FEELING)
 
 def feeling_good_callback(hermes, intent_message):
     session_id = intent_message.session_id
